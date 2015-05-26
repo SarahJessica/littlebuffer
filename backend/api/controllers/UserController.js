@@ -6,8 +6,8 @@
  */
  var qs = require('querystring');
  var request = require('request');
- // var jwt = require('jwt-simple');
- // var moment = require('moment');
+ var jwt = require('jwt-simple');
+ var moment = require('moment');
 
 
  module.exports = {
@@ -86,7 +86,6 @@
  		}
  	}
  };
-
 
  /*
  |--------------------------------------------------------------------------
