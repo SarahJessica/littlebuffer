@@ -12,6 +12,7 @@
     <div class='container'>
       <h2>littlebuffer</h2>
       <!-- <button ng-hide='is Authenticated()' class='btn btn-primary' ng-click='login()'>Login</button> -->
+
       <!-- <label for="pinEntry">Enter the PIN from twitter</label> -->
       <!-- <input type="number" ng-model='pin' id='pinEntry'></input>
       <button ng-click='validate(pin)'>Submit Pin</button> -->
@@ -19,6 +20,12 @@
       <div class='well'>
         <div class='form-group'>
           <input class='form-control' placeholder="message" ng-model='message'>
+        </div>
+        <div class='input-group'>
+          <input class='form-control' datepicker-popup is-open='opened' min-date='minDate' ng-model='date'>
+          <div class='input-group-btn'>
+            <button class='btn btn-default' ng-click='open($event)'>Calendar</button>
+          </div>
         </div>
         <button class='btn btn-default' ng-click='tweet()'>tweet</button>
       </div>

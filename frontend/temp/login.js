@@ -1,5 +1,5 @@
 angular.module('app').controller('login', function($scope, $auth, $http){
-  console.log('controller loaded;');
+  // console.log('controller loaded;');
 
   $scope.isAuthenticated = $auth.isAuthenticated;
 
@@ -21,6 +21,16 @@ angular.module('app').controller('login', function($scope, $auth, $http){
     .then(function(){
 
     });
+  };
+
+  $scope.minDate = new Date();
+  $scope.opened = false;
+  $scope.open = function($event){
+    // this ui-bootstrap plugin would otherwise auto set to false!
+    $event.preventDefault();
+    $event.stopPropagation();
+
+    $scope.opened = !$scope.opened;
   };
 
 });

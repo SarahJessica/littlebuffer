@@ -1,6 +1,7 @@
  <html ng-app='app'>
   <head>
     <!-- vendorInject:css -->
+    <link rel="stylesheet" href="vendor/bootstrap.css">
     <!-- endinject -->
     <!-- inject:css -->
     <link rel="stylesheet" href="bootstrap.css">
@@ -13,6 +14,7 @@
     <div class='container'>
       <h2>littlebuffer</h2>
       <!-- <button ng-hide='is Authenticated()' class='btn btn-primary' ng-click='login()'>Login</button> -->
+
       <!-- <label for="pinEntry">Enter the PIN from twitter</label> -->
       <!-- <input type="number" ng-model='pin' id='pinEntry'></input>
       <button ng-click='validate(pin)'>Submit Pin</button> -->
@@ -21,14 +23,23 @@
         <div class='form-group'>
           <input class='form-control' placeholder="message" ng-model='message'>
         </div>
+        <div class='input-group'>
+          <input class='form-control' datepicker-popup is-open='opened' min-date='minDate' ng-model='date'>
+          <div class='input-group-btn'>
+            <button class='btn btn-default' ng-click='open($event)'>Calendar</button>
+          </div>
+        </div>
         <button class='btn btn-default' ng-click='tweet()'>tweet</button>
       </div>
      </div>
     <!-- vendorInject:js -->
     <script src="vendor/angular.js"></script>
     <script src="vendor/app.js"></script>
+    <script src="vendor/bootstrap.js"></script>
+    <script src="vendor/jquery.js"></script>
     <script src="vendor/login.js"></script>
     <script src="vendor/satellizer.js"></script>
+    <script src="vendor/ui-bootstrap-tpls.js"></script>
     <!-- endinject -->
     <!-- inject:js -->
     <script src="app.js"></script>
