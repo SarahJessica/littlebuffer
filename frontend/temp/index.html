@@ -9,10 +9,14 @@
     <h2>Hello</h2>
     <button ng-click='login()'>Login</button>
     <label for="pinEntry">Enter the PIN from twitter</label>
-    <input type="number" ng-model='pin' id='pinEntry'></input>
-    <button ng-click='validate(pin)'>Submit Pin</button>
+    <!-- <input type="number" ng-model='pin' id='pinEntry'></input>
+    <button ng-click='validate(pin)'>Submit Pin</button> -->
     <button ng-click='tweet()'>tweet</button>
     <!-- vendorInject:js -->
+    <script src="vendor/angular.js"></script>
+    <script src="vendor/app.js"></script>
+    <script src="vendor/login.js"></script>
+    <script src="vendor/satellizer.js"></script>
     <!-- endinject -->
     <!-- inject:js -->
     <script src="app.js"></script>
