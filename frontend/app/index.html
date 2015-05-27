@@ -1,4 +1,4 @@
-<html ng-app='app'>
+ <html ng-app='app'>
   <head>
     <!-- vendorInject:css -->
     <!-- endinject -->
@@ -6,12 +6,23 @@
     <!-- endinject -->
   </head>
   <body ng-controller='login'>
-    <h2>Hello</h2>
-    <button ng-click='login()'>Login</button>
-    <label for="pinEntry">Enter the PIN from twitter</label>
-    <!-- <input type="number" ng-model='pin' id='pinEntry'></input>
-    <button ng-click='validate(pin)'>Submit Pin</button> -->
-    <button ng-click='tweet()'>tweet</button>
+    <nav class='navbar navbar-default'>
+      <button ng-show='isAuthenticated()' class='btn btn-link pull-right' ng-click='logout()'>Logout</button>
+    </nav>
+    <div class='container'>
+      <h2>littlebuffer</h2>
+      <!-- <button ng-hide='is Authenticated()' class='btn btn-primary' ng-click='login()'>Login</button> -->
+      <!-- <label for="pinEntry">Enter the PIN from twitter</label> -->
+      <!-- <input type="number" ng-model='pin' id='pinEntry'></input>
+      <button ng-click='validate(pin)'>Submit Pin</button> -->
+
+      <div class='well'>
+        <div class='form-group'>
+          <input class='form-control' placeholder="message" ng-model='message'>
+        </div>
+        <button class='btn btn-default' ng-click='tweet()'>tweet</button>
+      </div>
+     </div>
     <!-- vendorInject:js -->
     <!-- endinject -->
     <!-- inject:js -->

@@ -1,6 +1,8 @@
 angular.module('app').controller('login', function($scope, $auth, $http){
   console.log('controller loaded;');
 
+  $scope.isAuthenticated = $auth.isAuthenticated;
+
   $scope.login = function(){
     $auth.authenticate('twitter');
   };
@@ -10,10 +12,15 @@ angular.module('app').controller('login', function($scope, $auth, $http){
   //   // I know the above won't work... I was thinking of it as a template? Not sure
   // };
 
+  $scope.logout = function(){
+    $auth.logout();
+  };
+
   $scope.tweet = function(){
-    $http.post('/api/post/tweet', '')
+    $http.post('/api/post/tweet', {message: $scope.message})
     .then(function(){
 
     });
   };
+
 });
