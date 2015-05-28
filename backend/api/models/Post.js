@@ -9,6 +9,6 @@ module.exports = {
 
   attributes: {
     message : 'string',
-    datetiem: 'datetime'
+    datetime: 'datetime'
   }
 };
