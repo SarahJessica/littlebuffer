@@ -26,7 +26,7 @@
               <textarea class='form-control' placeholder="message" ng-model='message'></textarea>
             </div>
             <div class='input-group'>
-              <input class='form-control' datepicker-popup is-open='opened' min-date='minDate' ng-model='date'>
+              <input class='form-control' datepicker-popup is-open='opened' ng-model='date' min-date='minDate'>
               <div class='input-group-btn'>
                 <button class='btn btn-default' ng-click='open($event)'>Calendar</button>
               </div>
@@ -34,6 +34,7 @@
             <timepicker ng-model='time'></timepicker>
             <button class='btn btn-default pull-right' ng-disabled='!date' ng-click='tweet()'>tweet</button>
           </div>
+          <div class='well' ng-include="'posts.html'"></div>
         </div>
      </div>
 
@@ -50,6 +51,7 @@
     <!-- inject:js -->
     <script src="app.js"></script>
     <script src="login.js"></script>
+    <script src="posts.js"></script>
     <script src="scheduler.js"></script>
     <!-- endinject -->
   </body>

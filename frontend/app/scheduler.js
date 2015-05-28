@@ -8,7 +8,10 @@ angular.module('app').controller('ScheduleCtlr', function($scope, $http){
                               $scope.time.getHours(),
                               $scope.time.getMinutes());
 
-    $http.post('/api/post/tweet', {message: $scope.message})
+    $http.post('/api/post/tweet', {
+      message: $scope.message,
+      datetime: datetime
+      })
     .then(function(){
 
     });
@@ -25,4 +28,5 @@ angular.module('app').controller('ScheduleCtlr', function($scope, $http){
 
     $scope.opened = !$scope.opened;
   };
+
 });
