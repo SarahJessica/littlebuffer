@@ -14,6 +14,14 @@ module.exports = {
 		// var message = (req.userId, function (err, user){
 
 			var message = req.body.message;
+      var datetime = req.body.datetime;
+
+      Post.create({
+        message: message,
+        datetime: datetime
+      }).exec(function(err, post){
+        console.log('working', post, err);
+      });
 
 			var T = new Twit({
 				consumer_key: config.TWITTER_KEY,
@@ -29,7 +37,7 @@ module.exports = {
 				console.log(data, err);
 				res.status(200).end();
 			});
- 
+
 
 		// });
 	}

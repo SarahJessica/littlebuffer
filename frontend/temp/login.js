@@ -1,4 +1,4 @@
-angular.module('app').controller('login', function($scope, $auth, $http){
+angular.module('app').controller('loginCtlr', function($scope, $auth){
   // console.log('controller loaded;');
 
   $scope.isAuthenticated = $auth.isAuthenticated;
@@ -14,23 +14,6 @@ angular.module('app').controller('login', function($scope, $auth, $http){
 
   $scope.logout = function(){
     $auth.logout();
-  };
-
-  $scope.tweet = function(){
-    $http.post('/api/post/tweet', {message: $scope.message})
-    .then(function(){
-
-    });
-  };
-
-  $scope.minDate = new Date();
-  $scope.opened = false;
-  $scope.open = function($event){
-    // this ui-bootstrap plugin would otherwise auto set to false!
-    $event.preventDefault();
-    $event.stopPropagation();
-
-    $scope.opened = !$scope.opened;
   };
 
 });
