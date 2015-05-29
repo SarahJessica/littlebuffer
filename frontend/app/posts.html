@@ -7,8 +7,9 @@
       </tr>
       <tr>
         <td></td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td><button ng-hide='post.edit' ng-click='makeUpdate(post)'>Edit</button>
+          <button ng-show='post.edit' ng-click='saveUpdate(post)'>Save</button></td>
+        <td><button>Delete</button></td>
         <td class='text-muted pull-right'>{{post.datetime | date:'short'}}</td>
       </tr>
     </table>
