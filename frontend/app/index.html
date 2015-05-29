@@ -1,13 +1,49 @@
-<html ng-app='app'>
+ <html ng-app='app'>
   <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- vendorInject:css -->
     <!-- endinject -->
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body ng-controller='login'>
-    <h2>Hello</h2>
-    <button ng-click='login()'>Login</button>
+  <body ng-controller='loginCtlr'>
+    <nav class='navbar navbar-default'>
+      <button ng-show='isAuthenticated()' class='btn btn-link pull-right' ng-click='logout()'>Logout</button>
+    </nav>
+    <div class='container'>
+      <!-- <button ng-hide='is Authenticated()' class='btn btn-primary' ng-click='login()'>Login</button> -->
+
+
+
+      <!-- <label for="pinEntry">Enter the PIN from twitter</label> -->
+      <!-- <input type="number" ng-model='pin' id='pinEntry'></input>
+      <button ng-click='validate(pin)'>Submit Pin</button> -->
+      <div class='col-sm-8 col-sm-offset-2 col-md-6 col-md-offet-3'>
+        <h2>littlebuffer</h2>
+          <div class='well clearfix' ng-controller='ScheduleCtlr'>
+            <div class='form-group'>
+              <textarea class='form-control' placeholder="message" ng-model='message'></textarea>
+            </div>
+            <div class='input-group'>
+              <input class='form-control' datepicker-popup is-open='opened' ng-model='date' min-date='minDate'>
+              <div class='input-group-btn'>
+                <button class='btn btn-default' ng-click='open($event)'>Calendar</button>
+              </div>
+            </div>
+            <timepicker ng-model='time'></timepicker>
+            <button class='btn btn-default pull-right' ng-disabled='!date' ng-click='tweet()'>tweet</button>
+          </div>
+
+
+
+          <div class='well' ng-include='"posts.html"'></div>
+        </div>
+     </div>
+
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- vendorInject:js -->
     <!-- endinject -->
     <!-- inject:js -->

@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var webserver = require('gulp-webserver');
 var mainBowerFiles = require('main-bower-files');
 var inject = require('gulp-inject');
+var browser = require('browser-sync');
 // var del = require('del');
 
 var paths = {
@@ -45,7 +46,7 @@ gulp.task('vendors', ['copyVendor', 'scripts'], function () {
 
 gulp.task('copyVendor', function () {
 	return gulp.src(mainBowerFiles()).pipe(gulp.dest(paths.tempVendor));
-})
+});
 
 gulp.task('scripts', ['copyApp'], function () {
 
@@ -62,6 +63,13 @@ gulp.task('scripts', ['copyApp'], function () {
 
 gulp.task('copyApp', function () {
 	return gulp.src(paths.appSrc).pipe(gulp.dest(paths.temp));
+});
+
+gulp.task('refresh', function(cb) {
+	run('serve', 'reload', cb);
+});
+gulp.task('reload', function(){
+	return browser.reload();
 });
 
 // gulp.task('clean', function (cb) {
