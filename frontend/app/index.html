@@ -9,6 +9,9 @@
   </head>
   <body ng-controller='loginCtlr'>
     <nav class='navbar navbar-default'>
+      <button class='btn btn-default'>Schedule</button>
+      <button class='btn btn-default'>Edit</button>
+      <button class='btn btn-default'>Delete</button>
       <button ng-show='isAuthenticated()' class='btn btn-link pull-right' ng-click='logout()'>Logout</button>
     </nav>
     <div class='container'>
@@ -19,21 +22,9 @@
       <!-- <label for="pinEntry">Enter the PIN from twitter</label> -->
       <!-- <input type="number" ng-model='pin' id='pinEntry'></input>
       <button ng-click='validate(pin)'>Submit Pin</button> -->
-      <div class='col-sm-8 col-sm-offset-2 col-md-6 col-md-offet-3'>
-        <h2>littlebuffer</h2>
-          <div class='well clearfix' ng-controller='ScheduleCtlr'>
-            <div class='form-group'>
-              <textarea class='form-control' placeholder="message" ng-model='message'></textarea>
-            </div>
-            <div class='input-group'>
-              <input class='form-control' datepicker-popup is-open='opened' ng-model='date' min-date='minDate'>
-              <div class='input-group-btn'>
-                <button class='btn btn-default' ng-click='open($event)'>Calendar</button>
-              </div>
-            </div>
-            <timepicker ng-model='time'></timepicker>
-            <button class='btn btn-default pull-right' ng-disabled='!date' ng-click='tweet()'>tweet</button>
-          </div>
+      <h2>littlebuffer</h2>
+      <div ng-include='"schedulePost.html"'>
+        </div>
 
 
 
