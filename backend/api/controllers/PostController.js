@@ -21,30 +21,32 @@ module.exports = {
         datetime: datetime,
         owner: 100 // req.userId
       }).exec(function(err, post){
-        console.log('**********working', post, err, req.body.datetime);
+        // console.log('**********working', post, err, req.body.datetime);
+        // console.log('##################', res);
       });
 
-			// var T = new Twit({
-			// 	consumer_key: config.TWITTER_KEY,
-			// 	consumer_secret: config.TWITTER_SECRET,
-			// 	access_token: '20260726-0jKIfAGvMVmrnByh0zs3OulKIgPerRP1mDj6BYtm2',
-			// 	access_token_secret: 'fyxvXNWPExW3pIqjxPh0oxlj2qPSoGJ95LH1MBPUvF4Fy'
-			// });
-      //
-      //
-			// T.post('statuses/update', {
-			// 		status: message
-			// 	}, function (err, data, response) {
-			// 	console.log(data, err);
-			// 	res.status(200).end();
-			// });
+			var T = new Twit({
+				consumer_key: config.TWITTER_KEY,
+				consumer_secret: config.TWITTER_SECRET,
+				access_token: '20260726-0jKIfAGvMVmrnByh0zs3OulKIgPerRP1mDj6BYtm2',
+				access_token_secret: 'fyxvXNWPExW3pIqjxPh0oxlj2qPSoGJ95LH1MBPUvF4Fy'
+			});
+
+
+			T.post('statuses/update', {
+					status: message
+				}, function (err, data, response) {
+				// console.log(data, err);
+				res.status(200).end();
+			});
 
 
 		// });
 	},
   myPosts : function(req, res){
-    Post.find({owner: 100}, function(err, posts){
+    Post.find({}).exec(function(err, posts){
+      console.log("€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€", posts);
       res.json(posts);
-    })
+    });
   }
 };
