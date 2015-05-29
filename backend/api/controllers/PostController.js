@@ -4,7 +4,6 @@
  * @description :: Server-side logic for managing posts
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
-var Twit = require('twit');
 
 
 module.exports = {
@@ -19,26 +18,14 @@ module.exports = {
       Post.create({
         message: message,
         datetime: datetime,
+        isPosted: false,
         owner: 100 // req.userId
       }).exec(function(err, post){
         // console.log('**********working', post, err, req.body.datetime);
         // console.log('##################', res);
       });
 
-			var T = new Twit({
-				consumer_key: config.TWITTER_KEY,
-				consumer_secret: config.TWITTER_SECRET,
-				access_token: '20260726-0jKIfAGvMVmrnByh0zs3OulKIgPerRP1mDj6BYtm2',
-				access_token_secret: 'fyxvXNWPExW3pIqjxPh0oxlj2qPSoGJ95LH1MBPUvF4Fy'
-			});
 
-
-			T.post('statuses/update', {
-					status: message
-				}, function (err, data, response) {
-				// console.log(data, err);
-				res.status(200).end();
-			});
 
 
 		// });
