@@ -25,9 +25,6 @@ module.exports = {
         // console.log('##################', res);
       });
 
-
-
-
 		// });
 	},
   myPosts : function(req, res){
