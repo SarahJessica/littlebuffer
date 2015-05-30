@@ -18,7 +18,7 @@ module.exports = {
       Post.create({
         message: message,
         datetime: datetime,
-        isPosted: false,
+        // isPosted: false,
         owner: 100 // req.userId
       }).exec(function(err, post){
         // console.log('**********working', post, err, req.body.datetime);
@@ -29,8 +29,16 @@ module.exports = {
 	},
   myPosts : function(req, res){
     Post.find({}).exec(function(err, posts){
-      console.log("€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€", posts);
+      // console.log("€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€", posts);
       res.json(posts);
+    });
+  },
+  update : function(req, res){
+    console.log('req.body', req.body);
+    // console.log('res', res);
+    Post.update({id : req.body.id}, req.body).exec(function(err, post){
+      console.log(post);
+      res.status(200);
     });
   }
 };
