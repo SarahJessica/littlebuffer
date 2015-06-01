@@ -9,13 +9,10 @@
   </head>
   <body ng-controller='loginCtlr'>
     <nav class='navbar navbar-default'>
-      <button class='btn btn-default'>Schedule</button>
-      <button class='btn btn-default'>Edit</button>
-      <button class='btn btn-default'>Delete</button>
       <button ng-show='isAuthenticated()' class='btn btn-link pull-right' ng-click='logout()'>Logout</button>
     </nav>
     <div class='container'>
-      <!-- <button ng-hide='is Authenticated()' class='btn btn-primary' ng-click='login()'>Login</button> -->
+      <button ng-hide='isAuthenticated()' class='btn btn-primary' ng-click='login()'>Login</button>
 
 
 

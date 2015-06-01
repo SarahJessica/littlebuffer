@@ -12,8 +12,9 @@
           <div class='col-xs-1' ng-show='post.edit'><button class='button button-primary' ng-show='post.edit' ng-click='saveUpdate(post)'><span class='glyphicon glyphicon-floppy-saved'></span></button></div>
           <div class='col-xs-3'><button class='button button-danger' ng-click='delete(post)'><span class='glyphicon glyphicon-trash'></span></button></div>
           <div class='col-xs-3 pull-right text-muted' ng-hide='post.edit'>{{post.datetime | date:'short'}}</div>
-          <div class='col-xs-4 pull-right text-muted' ng-show='post.edit'>
-            <input type='date' ng-model='post.datetime'></input></div>
+          <div class='col-xs-4 pull-right text-muted' ng-if='post.edit'>
+            <input type='datetime-local' ng-model='post.datetime'></input>
+          </div>
         </div>
       </div>
 
