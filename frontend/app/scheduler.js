@@ -1,4 +1,6 @@
-angular.module('app').controller('ScheduleCtlr', function($scope, $http){
+angular.module('app').controller('ScheduleCtlr', function($scope, $http, $window){
+  console.log($window.moment());
+
 
   $scope.tweet = function(){
 
@@ -7,13 +9,12 @@ angular.module('app').controller('ScheduleCtlr', function($scope, $http){
                               $scope.date.getDate(),
                               $scope.time.getHours(),
                               $scope.time.getMinutes());
-
     $http.post('/api/post/tweet', {
       message: $scope.message,
-      datetime: datetime
+      datetime: datetime,
       })
     .then(function(){
-
+    
     });
   };
 

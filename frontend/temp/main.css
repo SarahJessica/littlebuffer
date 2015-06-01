@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Amatic SC', cursive;
+}
+
+button {
+  padding: 3px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.stackedMsg {
+  margin-bottom: 5px;
+}

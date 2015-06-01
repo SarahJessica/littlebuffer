@@ -10,8 +10,7 @@ sails.load(function(){
 
 function checkPosts(){
   Post.find().where({
-    datetime: {'<': new Date()},
-    isPosted: false}).populate('owner').exec(function (err, posts){
+    datetime: {'<': new Date()}).populate('owner').exec(function (err, posts){
     console.log(posts);
     posts.forEach(function(post){
       // sendTweet(post.owner.twitterToken, post.owner.twitterSecret, post.message, function);
@@ -42,7 +41,7 @@ function sendTweet(message, cb){
 
 }
 function updatePostedPost(post){
-  post.isPosted = true;
+  // post.isPosted = true;
   post.save(function(){
     console.log('isPosted changed to true');
   });
