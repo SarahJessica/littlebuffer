@@ -1,12 +1,27 @@
 @import url(http://fonts.googleapis.com/css?family=Amatic+SC);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  background: repeating-linear-gradient(
+  -45deg,
+  #000000,
+  #000000 1px,
+  #ffffff 1px,
+  #ffffff 7px
+);
+  font-family: font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1em;
 }
 
-h1, h2, h3 {
+h2, h3 {
   font-family: 'Amatic SC', cursive;
+}
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  background-color: rgb(210, 219, 31);
+  padding: 3px;
 }
 
 button {
@@ -19,4 +34,21 @@ textarea {
 
 .stackedMsg {
   margin-bottom: 5px;
+  background-color: white;
+}
+
+
+.well {
+  background-color: rgb(21, 23, 214);
+}
+
+.btn {
+  background-color: #eee;
+  color: #000000;
+  border: black 1px solid;
+}
+.btn:hover {
+  background-color: #ccc;
+  color: #000000;
+  border: black 1px solid;
 }

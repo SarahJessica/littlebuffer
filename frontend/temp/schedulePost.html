@@ -5,9 +5,9 @@
   <div class='input-group'>
     <input class='form-control' datepicker-popup is-open='opened' ng-model='date' min-date='minDate'>
     <div class='input-group-btn'>
-      <button class='btn btn-default' ng-click='open($event)'>Calendar</button>
+      <button class='btn btn-primary' ng-click='open($event)'>Calendar</button>
     </div>
   </div>
   <timepicker ng-model='time'></timepicker>
-  <button class='btn btn-default pull-right' ng-disabled='!date' ng-click='tweet()'>tweet</button>
+  <button class='btn btn-primary pull-right' ng-disabled='!date' ng-click='tweet()'>tweet</button>
 </div>
