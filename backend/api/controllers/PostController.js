@@ -19,7 +19,7 @@ module.exports = {
       message: message,
       datetime: datetime,
       // isPosted: false,
-      owner: 100 // req.userId
+      owner: req.userId
     }).exec(function(err, post){
       res.send(200);
     });

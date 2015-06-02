@@ -58,7 +58,7 @@ module.exports = {
 					}
 					user.twitter = profile.user_id;
 					user.displayName = user.displayName || profile.screen_name;
-					user.twitterToken  = profile.oauth_token;
+					user.twitterToken = profile.oauth_token;
 					user.twitterSecret = profile.oauth_token_secret;
 					user.save(function(err) {
 					res.send({ token: createToken(user) });

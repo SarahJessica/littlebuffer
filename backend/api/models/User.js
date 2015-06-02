@@ -14,7 +14,7 @@ module.exports = {
 			lowercase: true
 		},
 		displayName: 'string',
-		twitter: 'string'
+		twitter: 'string', 
 		twitterToken: 'string',
 		twitterSecret: 'string'
 	}
