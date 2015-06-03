@@ -100,3 +100,17 @@ textarea {
   color: #000000;
   border: black 1px solid;
 }
+#modalContent {
+  text-align: center;
+}
+#modalContent p a:link {
+  color: #7A58DF;
+}
+#modalContent p a:visited {
+  color: #7A58DF;
+}
+#modalContent p a:hover {
+  color: #black;
+  text-decoration: none;
+  border-bottom: 2px dashed;
+}
