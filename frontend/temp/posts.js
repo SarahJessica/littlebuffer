@@ -43,10 +43,10 @@ angular.module('app').controller('PostCtlr', function($scope, $http, $rootScope,
   function destroy(post){
     $http.post('/api/post/destroy/', post)
     .then(function(res){
-      console.log('RES', res);
+      console.log('###############################RES', res);
       swal("Deleted!", "Poof!", "success");
-      $window._.remove(function(p){
-        return post.id === p.res.id;
+      $window._.remove($rootScope.posts, function(p){
+        return p.id === res.data.id;
       });
     });
   }

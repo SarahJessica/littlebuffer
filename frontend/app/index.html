@@ -12,6 +12,7 @@
       <button ng-show='isAuthenticated()' class='btn btn-link pull-right' ng-click='logout()'>Logout</button>
     </nav>
     <div class='container'>
+      <div ng-include='"splash.html"'></div>
       <button ng-hide='isAuthenticated()' class='btn btn-primary' ng-click='login()'>Login</button>
 
 

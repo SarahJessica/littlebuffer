@@ -13,6 +13,9 @@ body {
   font-family: font-family: 'Roboto', sans-serif;
   letter-spacing: 0.1em;
 }
+body .container {
+  max-width: 650px;
+}
 
 h2, h3, h4 {
   font-family: 'Amatic SC', cursive;
@@ -40,6 +43,9 @@ h1 {
 :-ms-input-placeholder {
   letter-spacing: 0.1em;
 }
+.well {
+  background-color: #7A58DF;
+}
 td a.btn {
   margin: 3px;
   border-radius: 0;
@@ -52,29 +58,38 @@ td a.btn:hover {
   border: none;
   background-color: rgb(210, 219, 31);
 }
-td .input-group .ng-untouched {
+.calendar-holder input{
   border-radius: 0 !important;
-  border: none !important;
-  /*outline: 0 !important;*/
 }
+
+/*td input .input-group {
+  border-radius: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+}*/
 button {
   padding: 3px;
 }
 
 textarea {
-  width: 100%;
+  width: 100% !important;
+  letter-spacing: 0.1em;
 }
 
 .stackedMsg {
   margin-bottom: 5px;
   background-color: white;
 }
-
-
-.well {
-  background-color: #7A58DF;
+.textarea {
+  width: 80%;
+  min-height: 30px;
 }
-
+.tweetList input {
+  margin: 8px;
+}
+.text-white {
+  color: rgb(210, 219, 31);
+}
 .btn {
   background-color: #eee;
   color: #000000;

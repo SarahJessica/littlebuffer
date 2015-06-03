@@ -3,7 +3,6 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- vendorInject:css -->
-    <link rel="stylesheet" href="vendor/sweetalert.css">
     <!-- endinject -->
     <!-- inject:css -->
     <link rel="stylesheet" href="main.css">
@@ -14,6 +13,7 @@
       <button ng-show='isAuthenticated()' class='btn btn-link pull-right' ng-click='logout()'>Logout</button>
     </nav>
     <div class='container'>
+      <div ng-include='"splash.html"'></div>
       <button ng-hide='isAuthenticated()' class='btn btn-primary' ng-click='login()'>Login</button>
 
 
@@ -36,19 +36,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
     <!-- vendorInject:js -->
-    <script src="vendor/angular.js"></script>
-    <script src="vendor/app.js"></script>
-    <script src="vendor/login.js"></script>
-    <script src="vendor/moment.js"></script>
-    <script src="vendor/satellizer.js"></script>
-    <script src="vendor/sweetalert.min.js"></script>
-    <script src="vendor/ui-bootstrap-tpls.js"></script>
     <!-- endinject -->
     <!-- inject:js -->
     <script src="app.js"></script>
     <script src="login.js"></script>
     <script src="posts.js"></script>
     <script src="scheduler.js"></script>
+    <script src="splash.js"></script>
     <!-- endinject -->
   </body>
 </html>
