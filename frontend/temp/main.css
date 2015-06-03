@@ -14,7 +14,7 @@ body {
   letter-spacing: 0.1em;
 }
 
-h2, h3 {
+h2, h3, h4 {
   font-family: 'Amatic SC', cursive;
 }
 h1 {
@@ -23,7 +23,40 @@ h1 {
   background-color: rgb(210, 219, 31);
   padding: 3px;
 }
-
+.message-count {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-align: right;
+}
+::-webkit-input-placeholder {
+   letter-spacing: 0.1em;
+}
+:-moz-placeholder { /* Firefox 18- */
+  letter-spacing: 0.1em;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  letter-spacing: 0.1em;
+}
+:-ms-input-placeholder {
+  letter-spacing: 0.1em;
+}
+td a.btn {
+  margin: 3px;
+  border-radius: 0;
+  border: none;
+  background-color: rgb(210, 219, 31);
+}
+td a.btn:hover {
+  margin: 3px;
+  border-radius: 0;
+  border: none;
+  background-color: rgb(210, 219, 31);
+}
+td .input-group .ng-untouched {
+  border-radius: 0 !important;
+  border: none !important;
+  /*outline: 0 !important;*/
+}
 button {
   padding: 3px;
 }

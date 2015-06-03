@@ -1,8 +1,8 @@
-angular.module('app').controller('PostCtlr', function($scope, $http){
+angular.module('app').controller('PostCtlr', function($scope, $http, $rootScope, $window){
 
   $http.get('/api/post/myPosts').then(function(posts){
     console.info(posts);
-    $scope.posts = posts.data;
+    $rootScope.posts = posts.data;
   });
   // $scope.post.edit = false;
   $scope.makeUpdate = function(post){
@@ -45,6 +45,9 @@ angular.module('app').controller('PostCtlr', function($scope, $http){
     .then(function(res){
       console.log('RES', res);
       swal("Deleted!", "Poof!", "success");
+      $window._.remove(function(p){
+        return post.id === p.res.id;
+      });
     });
   }
 });

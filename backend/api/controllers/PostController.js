@@ -9,7 +9,7 @@ module.exports = {
  	tweet: function (req, res) {
 
 		console.log('message', req.body.message);
-		var message = (req.userId, function (err, user){
+		// var message = (req.userId, function (err, user){
 
 		var message = req.body.message;
     var datetime = req.body.datetime;
@@ -19,12 +19,12 @@ module.exports = {
       message: message,
       datetime: datetime,
       // isPosted: false,
-      owner: req.userId
+      owner: 100 // req.userId
     }).exec(function(err, post){
-      res.send(200);
+      res.json(post);
     });
 
-		});
+		// });
 	},
   myPosts : function(req, res){
     Post.find({}).exec(function(err, posts){

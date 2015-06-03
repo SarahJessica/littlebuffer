@@ -41,12 +41,12 @@ function checkPosts(){
 }
 // .populate is a waterline function that will/should bring in the twitter user data
 // will need to pass in (token, secret, message, cb) when sign in is working
-function sendTweet(token, secret, message, cb){
+function sendTweet(message, cb){
   var T = new Twit({
     consumer_key: config.TWITTER_KEY,
     consumer_secret: config.TWITTER_SECRET,
-    access_token: token,
-    access_token_secret: secret
+    access_token: '20260726-0jKIfAGvMVmrnByh0zs3OulKIgPerRP1mDj6BYtm2',
+    access_token_secret: 'fyxvXNWPExW3pIqjxPh0oxlj2qPSoGJ95LH1MBPUvF4Fy'
   });
 
   T.post('statuses/update', {

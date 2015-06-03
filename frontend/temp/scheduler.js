@@ -1,9 +1,8 @@
-angular.module('app').controller('ScheduleCtlr', function($scope, $http, $window){
+angular.module('app').controller('ScheduleCtlr', function($scope, $http, $window, $rootScope){
   console.log($window.moment());
 
 
   $scope.tweet = function(){
-
     var datetime = new Date($scope.date.getFullYear(),
                               $scope.date.getMonth(),
                               $scope.date.getDate(),
@@ -13,9 +12,10 @@ angular.module('app').controller('ScheduleCtlr', function($scope, $http, $window
       message: $scope.message,
       datetime: datetime,
       })
-    .then(function(){
-    
+    .then(function(res){
+      $rootScope.posts.push(res.data);
     });
+    $scope.message = null;
   };
 
   $scope.time = new Date();
