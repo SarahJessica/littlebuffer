@@ -1,15 +1,21 @@
 <div class='well clearfix' ng-controller='ScheduleCtlr'>
   <div class='form-group'>
     <textarea class='form-control' placeholder="what's buffering?" ng-model='message' ng-trim="false" maxlength="140"></textarea>
-    <div ng-if='message.length' style='height: 15px; width: {{(message.length/140)*100}}%; background-color: rgb({{100 + message.length}},{{200 - message.length}},000)'></div>
+    <div ng-show='message.length' style='height: 15px; width: {{(message.length/140)*100}}%; background-color: rgb({{100 + message.length}},{{200 - message.length}},000)'></div>
     <!-- <div class=' message-count col-xs-2'><h4>{{140 - message.length}} chars</h4></div> -->
   </div>
   <div class='input-group calendar-holder'>
     <input class='form-control' datepicker-popup is-open='opened' ng-model='date' min-date='minDate'>
     <div class='input-group-btn'>
-      <button class='btn btn-primary col-xs-8 glyphicon glyphicon-calendar' ng-click='open($event)'></button>
+      <button class='btn btn-primary col-xs-8 glyphicon glyphicon-calendar' ng-click='open($event)'>&nbsp; </button>
     </div>
   </div>
-  <timepicker ng-model='time'></timepicker>
-  <button class='btn btn-primary pull-right' ng-disabled='!date' ng-click='tweet()'>tweet</button>
+  <div class='row bottom'>
+    <div class='col-xs-6'>
+      <timepicker ng-model='time'></timepicker>
+    </div>
+    <div class='col-xs-6'>
+      <button class='btn btn-primary pull-right tweet-btn' ng-disabled='!date' ng-click='tweet()'>tweet</button>
+    </div>
+  </div>
 </div>

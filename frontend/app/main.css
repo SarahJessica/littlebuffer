@@ -4,7 +4,7 @@
 
 /*
 #7a58df purple
-#d7a58 orange
+#df7a58 orange
 #bddf58 green
 #58bbdf blue
 
@@ -68,7 +68,8 @@ td a.btn:hover {
   background-color: #bddf58;
 }
 .calendar-holder input{
-  border-radius: 0 !important;
+  border-radius: 0;
+  width: 100%;
 }
 
 /*td input .input-group {
@@ -95,8 +96,25 @@ textarea {
   min-height: 30px;
 }
 .tweetList input {
-  margin: 8px;
+  /*margin: 8px;*/
+  padding: 1px;
+  margin-bottom: 15px !important;
+  margin-top: 15px !important;
 }
+.posts:nth-child(odd) {
+  background-color: #bddf58;
+}
+.posts:nth-child(even) {
+  background-color: #7a58df;
+}
+.tweetList.row{
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  background-color: #7a58df;
+  border-radius: 3px;
+}
+
 .text-white {
   color: #bddf58;
 }
@@ -113,9 +131,6 @@ textarea {
 .btn:focus {
 background-color: #d7a58;
 }
-.btn .disabled {
-  background-color: #7a58df !important;
-}
 #modalContent {
   text-align: center;
 }
@@ -129,4 +144,14 @@ background-color: #d7a58;
   color: #black;
   text-decoration: none;
   border-bottom: 2px dashed;
+}
+.tweet-btn {
+  margin-top: 26px;
+}
+.tweet-btn disabled {
+  margin-top: 26px;
+  background-color: #7a58df !important;
+}
+.row.bottom {
+  margin-top: 15px;
 }
