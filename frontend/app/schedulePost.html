@@ -1,7 +1,8 @@
 <div class='well clearfix' ng-controller='ScheduleCtlr'>
   <div class='form-group'>
-    <textarea class='form-control' placeholder="what's buffering?" ng-model='message' ng-trim="false" maxlength="140" style='border: 3px solid rgb({{100 + message.length}},{{200 - message.length}},000)'></textarea>
-    <div class='pull-right message-count col-xs-2' style='background-color: rgb({{100 + message.length}},{{200 - message.length}},000)'><h4>{{140 - message.length}} chars</h4></div>
+    <textarea class='form-control' placeholder="what's buffering?" ng-model='message' ng-trim="false" maxlength="140"></textarea>
+    <div style='height: 15px; width: {{(message.length/140)*100}}%; background-color: rgb({{100 + message.length}},{{200 - message.length}},000)'></div>
+    <!-- <div class=' message-count col-xs-2'><h4>{{140 - message.length}} chars</h4></div> -->
   </div>
   <div class='input-group calendar-holder'>
     <input class='form-control' datepicker-popup is-open='opened' ng-model='date' min-date='minDate'>

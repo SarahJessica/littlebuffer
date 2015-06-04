@@ -2,6 +2,15 @@
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+/*
+#7a58df purple
+#d7a58 orange
+#bddf58 green
+#58bbdf blue
+
+old yellow rgb(210, 219, 31)
+*/
+
 body {
   background: repeating-linear-gradient(
   -45deg,
@@ -23,7 +32,7 @@ h2, h3, h4 {
 h1 {
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
-  background-color: rgb(210, 219, 31);
+  background-color: #bddf58;
   padding: 3px;
 }
 .message-count {
@@ -50,13 +59,13 @@ td a.btn {
   margin: 3px;
   border-radius: 0;
   border: none;
-  background-color: rgb(210, 219, 31);
+  background-color: #bddf58;
 }
 td a.btn:hover {
   margin: 3px;
   border-radius: 0;
   border: none;
-  background-color: rgb(210, 219, 31);
+  background-color: #bddf58;
 }
 .calendar-holder input{
   border-radius: 0 !important;
@@ -79,6 +88,7 @@ textarea {
 .stackedMsg {
   margin-bottom: 5px;
   background-color: white;
+  margin-bottom: 5px;
 }
 .textarea {
   width: 80%;
@@ -88,7 +98,7 @@ textarea {
   margin: 8px;
 }
 .text-white {
-  color: rgb(210, 219, 31);
+  color: #bddf58;
 }
 .btn {
   background-color: #eee;
@@ -99,6 +109,12 @@ textarea {
   background-color: #ccc;
   color: #000000;
   border: black 1px solid;
+}
+.btn:focus {
+background-color: #d7a58;
+}
+.btn .disabled {
+  background-color: #7a58df !important;
 }
 #modalContent {
   text-align: center;
