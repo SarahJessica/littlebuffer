@@ -12,12 +12,12 @@ old yellow rgb(210, 219, 31)
 */
 
 body {
-  background: repeating-linear-gradient(
+  /*background: repeating-linear-gradient(
   -45deg,
   #000000,
   #000000 1px,
   #ffffff 1px,
-  #ffffff 7px
+  #ffffff 7px*/
 );
   font-family: font-family: 'Roboto', sans-serif;
   letter-spacing: 0.1em;
