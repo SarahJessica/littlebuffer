@@ -135,15 +135,24 @@ background-color: #d7a58;
   text-align: center;
 }
 #modalContent p a:link {
-  color: #7A58DF;
+  color: #7A58DF !important;
 }
 #modalContent p a:visited {
-  color: #7A58DF;
+  color: #7A58DF !important;
 }
 #modalContent p a:hover {
-  color: #black;
-  text-decoration: none;
-  border-bottom: 2px dashed;
+  color: black !important;
+  text-decoration: none !important;
+  border-bottom: 2px dashed !important;
+}
+#modalContent {
+  font-size: 1.5em;
+}
+#modalContent h2 h3{
+  font-size: 3em;
+}
+#modal.meet p{
+  text-align: right !important;
 }
 .tweet-btn {
   margin-top: 26px;
@@ -154,4 +163,24 @@ background-color: #d7a58;
 }
 .row.bottom {
   margin-top: 15px;
+}
+.splashImg {
+  height: 60px;
+  width: auto;
+  margin: 5 auto;
+}
+.splashImg.sails {
+  border-bottom: 14px white solid;
+}
+.splashImg.mongo {
+  border-bottom: 10px white solid;
+}
+.socialLinkContact {
+  color: #7A58DF !important;
+  font-size: 1.4em;
+}
+.stickMe{
+  width: 120px;
+  height: auto;
+  border: 10px white solid;
 }
