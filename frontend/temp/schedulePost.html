@@ -2,6 +2,7 @@
   <div class='form-group'>
     <textarea class='form-control' placeholder="what's buffering?" ng-model='message' ng-trim="false" maxlength="140"></textarea>
     <div ng-show='message.length' style='height: 15px; width: {{(message.length/140)*100}}%; background-color: rgb({{100 + message.length}},{{200 - message.length}},000)'></div>
+    <div ng-show='!message.length' style='height: 15px; width: 10px;'></div>
     <!-- <div class=' message-count col-xs-2'><h4>{{140 - message.length}} chars</h4></div> -->
   </div>
   <div class='input-group calendar-holder'>

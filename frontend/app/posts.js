@@ -1,6 +1,6 @@
-angular.module('app').controller('PostCtlr', function($scope, $http, $rootScope, $window){
+angular.module('app').controller('PostCtlr', function($scope, $http, $rootScope, $window, api){
 
-  $http.get('/api/post/myPosts').then(function(posts){
+  $http.get(api +'post/myPosts').then(function(posts){
     console.info(posts);
     $rootScope.posts = posts.data;
   });
@@ -13,7 +13,7 @@ angular.module('app').controller('PostCtlr', function($scope, $http, $rootScope,
   };
   $scope.saveUpdate = function(post){
     post.edit = false;
-    $http.post('/api/post/update', post)
+    $http.post(api + 'post/update', post)
     .then(function(res){
       // console.log('RES', res);
 
@@ -41,9 +41,9 @@ angular.module('app').controller('PostCtlr', function($scope, $http, $rootScope,
   };
 
   function destroy(post){
-    $http.post('/api/post/destroy/', post)
+    $http.post(api + 'post/destroy/', post)
     .then(function(res){
-      console.log('###############################RES', res);
+      console.log('RES', res);
       swal("Deleted!", "Poof!", "success");
       $window._.remove($rootScope.posts, function(p){
         return p.id === res.data.id;

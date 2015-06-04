@@ -10,4 +10,5 @@ angular.module('app', ['satellizer', 'ui.bootstrap'])
             // }
             });
 
-});
+})
+.constant('api', 'https://littlebuffer-backend.herokuapp.com/');

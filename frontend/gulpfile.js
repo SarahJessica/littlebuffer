@@ -26,7 +26,7 @@ gulp.task('serve', ['vendors'], function () {
 	return gulp.src(paths.temp)
 		.pipe(webserver({
 			livereload: true,
-      proxies: [{source: '/api', target: 'http://localhost:1337'}]
+      proxies: [{source: '/api', target: 'https://littlebuffer-backend.herokuapp.com/'}]
 		}));
 });
 
